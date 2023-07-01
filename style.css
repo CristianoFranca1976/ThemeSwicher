@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    width: 1440px;
+    height: 780px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 235.385px;
+    height: 102px;
+    border-radius: 59px;
+    background: #0a0a0a;
+ 
+    
+  }
+  
+  .switch input {
+    display: none; 
+    
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s;   
+    border-radius: 59px;
+    background-image: url(./assets/sun.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+     
+  } 
+    
+  .slider:before  {
+    position: absolute;
+    content: "";
+    width: 86.308px;
+    height: 86.308px;
+    left: 12px;
+    bottom: 7.69px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    
+   
+  }
+
+  .slider ::after{
+    position: absolute;
+    content: "" ;
+    width: 86.308px;
+    height: 86.308px;
+    left: 12px;
+    bottom: 7.69px;
+    transition: .4s;
+    border-radius: 50%;
+    
+  }
+  
+  input:checked + .slider {
+    background: #0b0b0b;
+    background-image: url(./assets/moon.svg);
+    background-repeat: no-repeat;
+    background-position: left 5px;
+
+
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(125px);
+    
+  }
+
+
+  .container.day-mode{
+    background-color: #F1F1F1;
+  }
+
+  body.night-mode {
+    background: #292C35;
+  }
